@@ -1,5 +1,7 @@
 package hello.controller;
 
+import hello.pojo.Demo;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,5 +12,10 @@ public class HelloController {
     public String helloWorld(){
         System.out.println("helloWorld");
         return "helloWorld";
+    }
+
+    @GetMapping("/getDemo")
+    public Demo getDemo(){
+        return new Demo("xxs", 11);
     }
 }
