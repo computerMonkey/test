@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-public class HelloController {
+@RequestMapping("hello2")
+public class HelloController2 {
 
     @RequestMapping("/helloWorld")
     public String helloWorld(){
